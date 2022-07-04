@@ -139,7 +139,7 @@ svg {
     line-height: calc(60/44);
     margin-bottom: 30px;
 }
-.hero .button{
+.hero .button,.form-button{
     color: inherit;
     background-color: var(--accent-color);
     font-weight: 700;
@@ -155,7 +155,7 @@ svg {
     font-family: inherit;
     transition: background-color 250ms var(--time-func);
 }
-.button:hover, .button:focus{
+.button:hover, .button:focus, .form-button:hover, .form-button:active{
     background-color:var(--accent-hover);
     cursor: pointer;
     outline: none;
@@ -467,6 +467,39 @@ padding-bottom: 0;
     border-radius: 4px;
     transform: scale(1);
     transition: transform 250ms var(--time-func);
+    padding: 40px;
+}
+/* Modal Form  */
+.modal-form .form-text{
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+.modal-form .form-input {
+    width: 100%;
+}
+.modal-form .icon{
+    position: absolute;
+    top: 50%;
+    left: 14px;
+}
+.modal-form .checkbox {
+    visibility: hidden;
+}
+.modal-form .checkbox:checked + .icon{
+    --color1:var(--accent-color);
+}
+.modal-form .checkbox + .icon{
+    --color1:var(--light-font);
+}
+.modal-form .form-button {
+    border: none;
+    color: var(--light-font);
+    cursor: pointer;
+}
+.modal-title{
+    text-align: center;
+    margin: 0;
 }
 .modal-close{
     position:absolute;
@@ -481,4 +514,46 @@ padding-bottom: 0;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: color 250ms var(--time-func);
+}
+.modal-close:hover{
+    color: var(--accent-color)
+}
+/* Form styles */
+.footer-form {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-form .form-text{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--light-font);
+    margin-bottom: 20px;
+    width: 100%;
+}
+.footer-form .form-input{
+    padding: 15px 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--footer-link);
+    width: 358px;
+}
+.footer-form .form-button{
+    border: none;
+    color: var(--light-font);
+    padding: 10px 29px;
+    font-size: 16px;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.footer-form .form-button .send-icon{
+    margin-left: 10px;
 }
