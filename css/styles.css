@@ -145,7 +145,7 @@ svg {
     font-weight: 700;
     letter-spacing: calc(16px*0.06);
     line-height: calc(30/16);
-    padding: 10px 32px;
+    padding: 10px 55px;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
